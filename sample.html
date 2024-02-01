@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Create Website with Auto Typing Text Effect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="img/logo.png" alt="" class="logo">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+      <img src="img/menu.png" alt="" class="menu-icon">
+    </nav>
+
+    <div class="text-box">
+      <h1>I'm <span class="auto-input"></span></h1>
+      <p>You can reach out to me if you need any nelp in making
+        a Website for you or your business.</p>
+      <a href="#">Contact me</a>
+      <a href="#" class="btn">Download CV</a>
+    </div>
+    <img src="img/bg7.png" alt="" class="user-img">
+  </header>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    let typed = new Typed(".auto-input", {
+      strings: ["Emma Downy", "Web Developer", "Blogger"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true
+    })
+  </script>
+
+</body></html>
+
