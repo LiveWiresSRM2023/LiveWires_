@@ -10,14 +10,14 @@
    <!-- =========================== css =========================== -->
    <link rel="stylesheet" href="/css/default.css">
 <!-- =========================== Icon =========================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
    <script src="https://kit.fontawesome.com/e19484dcd7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-   <img src="/images/space.avif" alt="">
-
-
+   <img class ="bg" src="/images/space.avif" alt="">
    <nav class="navbar">
       <ul>
          <li class="nav active"> 
@@ -45,14 +45,59 @@
    </nav>
    <!-- ======================== Home Section ================== -->
       <section class="home">
-         <h1>WE <span class="auto-input"></span></h1>
+         <div class="profile-bar">
+            <img class="Logo" src="./images/LW_light.png" alt="">
+            <div class="profile">
+               <!-- <a href="#"><i class="fa-solid fa-user"></i></a> -->
+               <button class="signup_btn"><a href="">Sign Up</a></button>
+            </div>
+         </div>
+         <div class="home_content">
+            <div class="home_text">
+               <h1>Explore The Art Of <br> <span class="cali">{</span>Code_..<span class="cali">}</span> With Our Team  </h1>
+               <h3>We <span class="auto-input"></span></h3>
+      
+               <p>
+                  "This is just our Early Innings, We will race ahead soon!”
+               </p>
+   
+               <button class="start_btn">
+                  <a href="#">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+               </button>
+            </div>
+            <div>
+               <img class="home_image" src="./images/Elvy.png" alt="">
+            </div>
+         </div>
+         <div class="main">
+            <a href="#">ELVY <br><i class="fa-solid fa-arrow-down"></i></a>
+            <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+              <defs>
+                <path id="circle" d="M 100, 100
+                        m -75, 0
+                        a 75, 75 0 1, 0 150, 0
+                        a 75, 75 0 1, 0 -150, 0
+                        ">
+                </path>
+              </defs>
+              <text width="800">
+                <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+                  Chat with our Elvy, To Know More
+                </textPath>
+              </text>
+            </svg>
+          </div>
       </section>
          <!-- ======================== Events Section ================== -->
       <section class="events">
+
+         <!-- <h1>Events</h1> -->
+
          
       </section>
             <!-- ======================== Sponsors Section ================== -->
       <section class="sponsors">
+         
          
       </section>
          <!-- ======================== About-us Section ================== -->
@@ -70,7 +115,7 @@
 
 <script>
   let typed = new Typed(".auto-input", {
-    strings: ["INTENT", "INVENT","INSPIRE"],
+    strings: ["Intent . Invent . Inspire"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true
