@@ -2,10 +2,12 @@
 
 import React from 'react'
 
-function events() {
+function Events() {
   return (
-    <div>events</div>
-  )
+    <div className="h-screen p-10 flex  justify-center bg-neutral-900">
+      <h1 className="text-white text-4xl font-bold">Our Events</h1>
+    </div>  
+    )
 }
 
-export default events
+export default Events
