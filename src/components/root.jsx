@@ -8,25 +8,26 @@ import Projects from './projects';
 import Contact from './contact';
 import Testimonials from './testimonials';
 import Sponsors from './sponsors';
-import Footer from './footer';
+// import Footer from './footer';
 import Team from './team';
-
-
+import Footer from './footer';
 
 function Root() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <About/>
-      <Events/>
-      <Divisions/>
-      <Projects/>
-      <Team/>
-      <Contact/>
-      <Testimonials/>
-      <Sponsors/>
-      <Footer/>
+      <div className="scroll-smooth"> 
+        <Hero id="hero"/>
+        <About id="about"/>
+        <Events id="events"/>
+        <Divisions id="divisions"/>
+        <Projects id="projects"/>
+        <Team id="team"/>
+        <Contact id="contact"/>
+        <Testimonials id="testimonials"/>
+        <Sponsors id="sponsors"/>
+        <Footer/>
+      </div>
     </div>
   );
 }

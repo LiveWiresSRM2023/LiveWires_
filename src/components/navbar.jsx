@@ -1,24 +1,113 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import LwFullW from '../assets/LwFullW.png'; // Adjust the path and extension if necessary
+import React, { useState, useEffect } from 'react';
+import LwFullW from '../assets/LwFullW.png';
 
 function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const navbarHeight = document.querySelector('nav')?.offsetHeight || 0;
+      const isNavbarHidden = scrollY > navbarHeight;
+      setIsScrolled(isNavbarHidden);
+      setShowScrollToTop(isNavbarHidden);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <nav className="bg-black text-white py-4 px-6 shadow-md h-16 flex items-center">
-      <div className="container mx-auto flex justify-between items-center h-full">
-        <div className="text-xl font-bold">
-          <Link to="/" className="hover:text-green-500">
-            <img src={LwFullW} alt="Logo" className="h-12 w-auto object-contain" /> {/* Adjust the size as needed */}
-          </Link>
+    <>
+      <nav className={`bg-neutral-900 text-white py-11 px-3 shadow-md h-16 flex items-center w-full top-0 left-0 z-30 ${isScrolled ? 'hidden' : ''}`}>
+        <div className="container mx-auto flex justify-between items-center h-full">
+          <div className="text-xl font-bold">
+            <a href="#hero" className="hover:text-green-500">
+              <img src={LwFullW} alt="Logo" className="h-12 w-auto object-contain" />
+            </a>
+          </div>
+          <div className="hidden md:flex space-x-4">
+            <a 
+              href="#chat" 
+              className="bg-none border-green-600 border-2 text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+            >
+              Chat With ELVY
+            </a>
+            <a 
+              href="#events" 
+              className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+            >
+              Ongoing Events
+            </a>
+            <a 
+              href="#join" 
+              className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+            >
+              Join Us
+            </a>
+          </div>
+          <button
+            className="md:hidden text-white focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <i className="fas fa-bars fa-2x"></i> {/* Hamburger icon */}
+          </button>
         </div>
-        <div className="space-x-4">
-          <Link to="/" className="hover:text-green-500">Home</Link>
-          <Link to="/about" className="hover:text-green-500">About</Link>
-          <Link to="/services" className="hover:text-green-500">Services</Link>
-          <Link to="/contact" className="hover:text-green-500">Contact</Link>
+        {/* Mobile Menu */}
+        <div className={`fixed top-0 right-0 bg-green-700 text-white w-64 h-full transform transition-transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden z-40`}>
+          <div className="flex justify-end p-4">
+            <button onClick={() => setIsMenuOpen(false)} className="text-white">
+              <i className="fas fa-times fa-2x"></i> {/* Close icon */}
+            </button>
+          </div>
+          <div className="flex flex-col items-center space-y-6 mt-8">
+            <a 
+              href="#chat" 
+              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+            >
+              Chat With ELVY
+            </a>
+            <a 
+              href="#events" 
+              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+            >
+              Ongoing Events
+            </a>
+            <a 
+              href="#join" 
+              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+            >
+              Join Us
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Scroll-to-Top Button */}
+      {showScrollToTop && (
+        <div className="fixed bottom-4 right-4 z-20">
+          <button
+            onClick={scrollToTop}
+            className="text-white bg-green-600 p-3 rounded-full shadow-lg focus:outline-none hover:scale-125 transition-all hover:bg-green-600"
+            aria-label="Scroll to top"
+          >
+            <i className="bg-transparent fas fa-chevron-up h-5 w-6"></i>
+          </button>
+        </div>
+      )}
+    </>
   );
 }
 
