@@ -12,6 +12,11 @@ import Testimonials from './components/testimonials';
 import Sponsors from './components/sponsors';
 import Footer from './components/footer';
 import Root from './components/root';
+import OngoingEvents from './components/subPages/ongoingEvents';
+import PrTeam from './components/subPages/pr';
+import IotTeam from './components/subPages/iot';
+import CreativesTeam from './components/subPages/creatives';
+import TechTeam from './components/subPages/tech';
 
 function App() {
   return (
@@ -28,6 +33,13 @@ function App() {
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/sponsors' element={<Sponsors />} />
         <Route path='/footer' element={<Footer />} />
+        <Route path='/tech' element={<TechTeam/>} />
+        <Route path='/creative' element={<CreativesTeam/>} />
+        <Route path='/iot' element={<IotTeam />} />
+        <Route path='/pr' element={<PrTeam/>} />
+        <Route path='/ongoingEvents' element={<OngoingEvents />} />
+
+
       </Routes>
     </BrowserRouter>
   );

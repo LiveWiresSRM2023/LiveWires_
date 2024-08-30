@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import LwFullW from '../assets/LwFullW.png';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,24 +41,24 @@ function Navbar() {
             </a>
           </div>
           <div className="hidden md:flex space-x-4">
-            <a 
-              href="#chat" 
+            <button 
+              onClick={() => navigate('/elvy')}
               className="bg-none border-green-600 border-2 text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
             >
               Chat With ELVY
-            </a>
-            <a 
-              href="#events" 
+            </button>
+            <button 
+              onClick={() => navigate('/ongoingEvents')}
               className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
             >
               Ongoing Events
-            </a>
-            <a 
-              href="#join" 
+            </button>
+            <button 
+              onClick={() => navigate('/join')}
               className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
             >
               Join Us
-            </a>
+            </button>
           </div>
           <button
             className="md:hidden text-white focus:outline-none"
@@ -73,24 +75,24 @@ function Navbar() {
             </button>
           </div>
           <div className="flex flex-col items-center space-y-6 mt-8">
-            <a 
-              href="#chat" 
+            <button
+              onClick={() => navigate('/subPages/ongoingEvents')}
               className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
             >
               Chat With ELVY
-            </a>
-            <a 
-              href="#events" 
+            </button>
+            <button 
+              onClick={() => navigate('/ongoingEvents')}
               className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
             >
               Ongoing Events
-            </a>
-            <a 
-              href="#join" 
+            </button>
+            <button 
+              onClick={() => navigate('/join')}
               className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
             >
               Join Us
-            </a>
+            </button>
           </div>
         </div>
       </nav>
