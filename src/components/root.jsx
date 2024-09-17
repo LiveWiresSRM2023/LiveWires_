@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './navbar';
 import Hero from './hero';
 import About from './about';
@@ -8,13 +8,12 @@ import Projects from './projects';
 import Contact from './contact';
 import Testimonials from './testimonials';
 import Sponsors from './sponsors';
-// import Footer from './footer';
 import Team from './team';
 import Footer from './footer';
 
 function Root() {
   return (
-    <div>
+    <div id="root">
       <Navbar />
       <div className="scroll-smooth"> 
         <Hero id="hero"/>

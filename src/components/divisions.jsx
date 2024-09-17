@@ -16,7 +16,7 @@ const TeamsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="overflow-x-auto bg-neutral-900 h-screen flex flex-col items-center justify-center">
+    <div className="overflow-x-auto bg-black h-screen flex flex-col items-center justify-center">
       <div className="relative p-10 w-full text-center">
         {/* Our Divisions Text */}
         <h1 className="text-white text-4xl font-bold mb-10">

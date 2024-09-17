@@ -33,7 +33,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`bg-neutral-900 text-white py-11 px-3 shadow-md h-16 flex items-center w-full top-0 left-0 z-30 ${isScrolled ? 'hidden' : ''}`}>
+      <nav className={`bg-black text-white py-11 px-3 shadow-md h-16 flex items-center w-full top-0 left-0 z-30 ${isScrolled ? 'hidden' : ''}`}>
         <div className="container mx-auto flex justify-between items-center h-full">
           <div className="text-xl font-bold">
             <a href="#hero" className="hover:text-green-500">
@@ -114,3 +114,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -47,8 +47,8 @@ const Events = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 5,
+    speed: 1000,
+    slidesToShow:3,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0',
@@ -90,7 +90,7 @@ const Events = () => {
   };
 
   return (
-    <div className="bg-neutral-900 min-h-screen flex flex-col items-center justify-start p-0">
+    <div className="bg-black min-h-screen flex flex-col items-center justify-start p-0">
       <h1 className="text-white text-4xl font-bold mt-8 mb-12 text-center">
         Our Events
       </h1>
