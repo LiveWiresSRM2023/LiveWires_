@@ -43,19 +43,19 @@ function Navbar() {
           <div className="hidden md:flex space-x-4">
             <button 
               onClick={() => navigate('/elvy')}
-              className="bg-none border-green-600 border-2 text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+              className="bg-none border-green-600 border-2 text-white px-6 py-3  hover:bg-green-600 transition duration-300"
             >
               Chat With ELVY
             </button>
             <button 
               onClick={() => navigate('/ongoingEvents')}
-              className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+              className="bg-none text-white border-2 border-green-600 px-6 py-3  hover:bg-green-600 transition duration-300"
             >
               Ongoing Events
             </button>
             <button 
               onClick={() => navigate('/join')}
-              className="bg-none text-white border-2 border-green-600 px-6 py-3 transform skew-x-[-20deg] hover:bg-green-600 transition duration-300"
+              className="bg-none text-white border-2 border-green-600 px-6 py-3 hover:bg-green-600 transition duration-300"
             >
               Join Us
             </button>
@@ -77,19 +77,19 @@ function Navbar() {
           <div className="flex flex-col items-center space-y-6 mt-8">
             <button
               onClick={() => navigate('/subPages/ongoingEvents')}
-              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+              className="bg-black text-white px-6 py-3  hover:bg-gray-800 transition duration-300"
             >
               Chat With ELVY
             </button>
             <button 
               onClick={() => navigate('/ongoingEvents')}
-              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+              className="bg-black text-white px-6 py-3  hover:bg-gray-800 transition duration-300"
             >
               Ongoing Events
             </button>
             <button 
               onClick={() => navigate('/join')}
-              className="bg-black text-white px-6 py-3 transform skew-x-[-20deg] hover:bg-gray-800 transition duration-300"
+              className="bg-black text-white px-6 py-3  hover:bg-gray-800 transition duration-300"
             >
               Join Us
             </button>
