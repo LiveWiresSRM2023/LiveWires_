@@ -13,6 +13,8 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/forms": "^0.5.8",
+    "cursor-effects": "^1.0.15",
+    "custom-cursor": "^2.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",

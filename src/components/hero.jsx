@@ -1,6 +1,7 @@
 // import React, { useEffect } from 'react';
 // import LwHeadW from '../assets/LwHeadW.png';
 // import Typed from 'typed.js';
+// import Navbar from './navbar';
 
 // function Hero() {
 //   useEffect(() => {
@@ -17,13 +18,16 @@
 //   }, []);
 
 //   return (
+//     <div>
+//       <Navbar/>
 //     <div className="h-screen p-10 flex flex-col justify-start items-center bg-black  text-center">
 //       <img src={LwHeadW} alt="Hero" className="animate-floatUp w-auto h-96 object-contain" />
 //       <h1 className="text-white text-4xl font-bold mb-6 animate-pulse">
 //         <span className="auto-input"></span>
 //       </h1>
 //       <br /><br />
-//       <h1 className="text-white text-4xl font-bold mb-6 animate-pulse">Explore the art of code</h1>
+//       <h1 className="text-white text-2xl pl-80 md:pl-9 md:pr-9 sm:pl-1 sm:pr-1 pr-80 mb-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel aliquam sit vulputate. </h1>
+//     </div>
 //     </div>
 //   );
 // }
@@ -32,9 +36,11 @@
 
 
 
+
 import React, { useEffect } from 'react';
 import LwHeadW from '../assets/LwHeadW.png';
 import Typed from 'typed.js';
+import Navbar from './navbar';
 
 function Hero() {
   useEffect(() => {
@@ -46,25 +52,26 @@ function Hero() {
     });
 
     return () => {
-      typed.destroy(); 
+      typed.destroy();
     };
   }, []);
 
   return (
-    <div className="relative h-screen p-10 flex flex-col justify-start items-center bg-black text-center">
-      <img 
-        src={LwHeadW} 
-        alt="Hero" 
-        className="absolute top-24 left-24 animate-floatUp w-auto h-96 object-contain" 
-      />
-
-      <h1 className="absolute top-64 text-white text-5xl font-bold mb-6 animate-pulse">
-        <span className="auto-input"></span>
-      </h1>
-
-      {/* <h1 className=" text-white text-4xl font-bold mb-6 animate-pulse">
-        Explore the art of code
-      </h1> */}
+    <div>
+      <Navbar />
+      <div className="h-screen p-4 md:p-10 flex flex-col justify-start items-center bg-black text-center">
+        <img
+          src={LwHeadW}
+          alt="Hero"
+          className="animate-floatUp w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-contain mb-6"
+        />
+        <h1 className="text-white text-2xl md:text-4xl font-bold mb-6 animate-pulse">
+          <span className="auto-input"></span>
+        </h1>
+        <h1 className="text-white text-base sm:text-lg md:text-2xl px-4 md:px-20 lg:px-40">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel aliquam sit vulputate.
+        </h1>
+      </div>
     </div>
   );
 }

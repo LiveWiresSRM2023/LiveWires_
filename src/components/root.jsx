@@ -13,8 +13,7 @@ import Footer from './footer';
 
 function Root() {
   return (
-    <div id="root">
-      <Navbar />
+    <div id="root" className=''>
       <div className="scroll-smooth"> 
         <Hero id="hero"/>
         <About id="about"/>

@@ -5,6 +5,8 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif']},
       backdropBlur: {
         xs: '2px',
         sm: '4px',
