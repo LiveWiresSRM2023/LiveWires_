@@ -58,7 +58,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen flex flex-col items-center justify-start p-0">
+    <div className="bg-[#001403] min-h-screen flex flex-col items-center justify-start p-0">
       <h1 className="text-white text-4xl font-bold mt-8 mb-12 text-center">Our Events</h1>
       <div className="relative w-full max-w-7xl px-4">
         <Arrow direction="left" onClick={() => sliderRef.current.slickPrev()} />

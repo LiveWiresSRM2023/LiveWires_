@@ -1,10 +1,10 @@
+/* Import the font at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: 'Jura', sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

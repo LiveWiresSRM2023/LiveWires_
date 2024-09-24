@@ -65,7 +65,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`bg-black text-white py-11 px-3 h-16 flex items-center w-full top-0 left-0 z-30 ${isScrolled ? 'hidden' : ''}`}>
+      <nav className={`bg-[#001403] text-white py-11 px-3 h-16 flex items-center w-full top-0 left-0 z-30 ${isScrolled ? 'hidden' : ''}`}>
         <div className="container mx-auto flex justify-between items-center h-full">
           <div className="text-xl font-bold">
             <a href="#hero" className="hover:text-green-500">
@@ -75,19 +75,19 @@ function Navbar() {
           <div className="hidden md:flex space-x-4">
             <button
               onClick={() => navigate('/elvy')}
-              className="bg-none border-green-600 border-2 text-white px-6 py-3 hover:bg-green-600 transition duration-300"
+              className="bg-none border-[#05C400] border-2 text-white px-6 py-3 hover:bg-[#05C400] hover:text-[#001403] transition duration-300"
             >
               Chat With ELVY
             </button>
             <button
               onClick={() => setShowPopup(true)}
-              className="bg-none text-white border-2 border-green-600 px-6 py-3 hover:bg-green-600 transition duration-300"
+              className="bg-none text-white border-2 border-[#05C400] px-6 py-3 hover:bg-[#05C400] hover:text-[#001403] transition duration-300"
             >
               Ongoing Events
             </button>
             <button
               onClick={() => navigate('/join')}
-              className="bg-none text-white border-2 border-green-600 px-6 py-3 hover:bg-green-600 transition duration-300"
+              className="bg-none text-white border-2 border-[#05C400] px-6 py-3 hover:bg-[#05C400]  hover:text-[#001403] transition duration-300"
             >
               Join Us
             </button>

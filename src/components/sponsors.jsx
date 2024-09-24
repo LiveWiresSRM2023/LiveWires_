@@ -1,4 +1,5 @@
 import React from 'react'
+import clip from '../assets/clip.png'
 
 function Sponsors() {
   return (

@@ -1,3 +1,85 @@
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+//     "./src/**/*.{html,jsx,js}", // Adjust the content paths as needed
+//   ],
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         sans: ['Roboto', 'sans-serif']},
+//       backdropBlur: {
+//         xs: '2px',
+//         sm: '4px',
+//         md: '6px',
+//         lg: '8px',
+//         xl: '10px',
+//       },
+//       backdropBrightness: {
+//         90: '90%',
+//         75: '75%',
+//       },
+//       backdropContrast: {
+//         90: '90%',
+//         75: '75%',
+//       },
+//       backdropSaturate: {
+//         90: '90%',
+//         75: '75%',
+//       },
+//       keyframes: {
+//         slideInLeft: {
+//           '0%': { transform: 'translateX(-100%)', opacity: '0' },
+//           '100%': { transform: 'translateX(0)', opacity: '1' },
+//         },
+//         slideInRight: {
+//           '0%': { transform: 'translateX(100%)', opacity: '0' },
+//           '100%': { transform: 'translateX(0)', opacity: '1' },
+//         },
+//         fadeIn: {
+//           '0%': { opacity: '0' },
+//           '100%': { opacity: '1' },
+//         },
+//         slideLeft: {
+//           '0%': { transform: 'translateX(100%)' },
+//           '100%': { transform: 'translateX(-100%)' },
+//         },
+//         slideRight: {
+//           '0%': { transform: 'translateX(-100%)' },
+//           '100%': { transform: 'translateX(100%)' },
+//         },
+//         floatUp: {
+//           '0%, 100%': { transform: 'translateY(0)' },
+//           '50%': { transform: 'translateY(-8px)' },
+//         },
+//         floatDown: {
+//           '0%, 100%': { transform: 'translateY(0)' },
+//           '50%': { transform: 'translateY(8px)' },
+//         },
+//         pings: {
+//           '0%': { opacity: '0' },
+//           '75%, 100%': { transform: 'scale(1.3)' },
+//           '100%': { transform: 'translateX(-550px) translateY(-380px)' },
+//         },
+//       },
+//       animation: {
+//         slideInLeft: 'slideInLeft 0.5s ease-out forwards',
+//         slideInRight: 'slideInRight 0.5s ease-out forwards',
+//         fadeIn: 'fadeIn 1s ease-out forwards',
+//         slideLeft: 'slideLeft 15s linear infinite',
+//         slideRight: 'slideRight 15s linear infinite',
+//         floatUp: 'floatUp 1.5s ease-in-out infinite',
+//         floatDown: 'floatDown 1.5s ease-in-out infinite',
+//         pings: 'pings 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+//       },
+//     },
+//   },
+//   plugins: [
+//     require('@tailwindcss/forms'),
+//     require('tailwindcss-filters'),
+//   ],
+// };
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,7 +88,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif']},
+        sans: ['Roboto', 'sans-serif'],
+        krona: ['Krona One', 'sans-serif'],
+      },
       backdropBlur: {
         xs: '2px',
         sm: '4px',
@@ -71,10 +155,26 @@ module.exports = {
         floatDown: 'floatDown 1.5s ease-in-out infinite',
         pings: 'pings 2s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
+      writingMode: {
+        'vertical-rl': 'vertical-rl', // Vertical right-to-left
+      },
+      textOrientation: {
+        upright: 'right',
+        mixed: 'mixed', // Ensure letters are upright in mixed orientation
+      },
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('tailwindcss-filters'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.writing-mode-vertical': {
+          'writing-mode': 'vertical-rl', // Vertical right-to-left
+          'text-orientation': 'mixed',     // Keep letters upright
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
   ],
 };
