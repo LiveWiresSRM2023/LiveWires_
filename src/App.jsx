@@ -17,6 +17,7 @@ import PrTeam from './components/subPages/pr';
 import IotTeam from './components/subPages/iot';
 import CreativesTeam from './components/subPages/creatives';
 import TechTeam from './components/subPages/tech';
+import LinkTree from './components/linktree';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         <Route path='/iot' element={<IotTeam />} />
         <Route path='/pr' element={<PrTeam/>} />
         <Route path='/ongoingEvents' element={<OngoingEvents />} />
-
+        <Route path='/recruitmentlinktree' element={<LinkTree />} />
 
       </Routes>
     </BrowserRouter>

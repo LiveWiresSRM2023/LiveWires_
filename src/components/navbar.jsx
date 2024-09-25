@@ -86,7 +86,7 @@ function Navbar() {
               Ongoing Events
             </button>
             <button
-              onClick={() => navigate('/join')}
+              onClick={() => navigate('/recruitmentlinktree')}
               className="bg-none text-white border-2 border-[#05C400] px-6 py-3 hover:bg-[#05C400]  hover:text-[#001403] transition duration-300"
             >
               Join Us

@@ -52,7 +52,7 @@ function About() {
         {/* Centering the button with glowing effect on all sides */}
         <div className="flex justify-center mb-8">
           <button
-            onClick={() => navigate('/join')}
+            onClick={() => navigate('/recruitmentlinktree')}
             className=" text-[#001403] font-bold px-6 py-3 bg-[#05C400] hover:scale-125 hover:text-[#001403] transition duration-300 max-w-[200px]  shadow-[0_0_25px_#05C400]"
           >
             Join Us
